@@ -755,17 +755,36 @@ NSString *res = _.unescape(@"lod&ampash");
 
 # Math
 
-###  ###
+### add ###
 
-
+Adds two numbers.
 
 **Arguments***
 
-
+a (number): The first number to add.
+b (number): The second number to add.
 
 **Return**
 
+(number): Returns the sum.
 
+**Example**
+
+```sh
+double res = _.add(4,6);
+```
+
+### ceil ###
+
+Calculates n rounded up to precision.
+
+**Arguments***
+
+n (number): The number to round up.
+
+**Return**
+
+(number): Returns the rounded up number.
 
 **Example**
 
@@ -773,17 +792,17 @@ NSString *res = _.unescape(@"lod&ampash");
 
 ```
 
-###  ###
+### floor ###
 
-
+Calculates n rounded down to precision.
 
 **Arguments***
 
-
+n (number): The number to round down.
 
 **Return**
 
-
+(number): Returns the rounded down number.
 
 **Example**
 
@@ -791,17 +810,18 @@ NSString *res = _.unescape(@"lod&ampash");
 
 ```
 
-###  ###
+### max ###
 
-
+Gets the maximum value of the values given.
 
 **Arguments***
 
-
+a (number): First number to compare.
+b (number): Second number to compare
 
 **Return**
 
-
+(number): Returns the maximum value.
 
 **Example**
 
@@ -809,17 +829,18 @@ NSString *res = _.unescape(@"lod&ampash");
 
 ```
 
-###  ###
+### min ###
 
-
+Gets the minimum value of the values given.
 
 **Arguments***
 
-
+a (number): First number to compare.
+b (number): Second number to compare
 
 **Return**
 
-
+(number): Returns the minimum value.
 
 **Example**
 
@@ -827,17 +848,17 @@ NSString *res = _.unescape(@"lod&ampash");
 
 ```
 
-###  ###
+### round ###
 
-
+Calculates n rounded to precision.
 
 **Arguments***
 
-
+n (number): The number to round.
 
 **Return**
 
-
+(number): Returns the rounded number.
 
 **Example**
 
@@ -845,17 +866,17 @@ NSString *res = _.unescape(@"lod&ampash");
 
 ```
 
-###  ###
+### abs ###
 
-
+Computes the absolute value of the given number.
 
 **Arguments***
 
-
+n (number): The number to compute.
 
 **Return**
 
-
+(number): Returns the absolute number.
 
 **Example**
 
@@ -863,17 +884,18 @@ NSString *res = _.unescape(@"lod&ampash");
 
 ```
 
-###  ###
+### power ###
 
-
+Computes a raised to the power b.
 
 **Arguments***
 
-
+a (number): The number to compute.
+b (number): Precision.
 
 **Return**
 
-
+(number): Returns the powered number.
 
 **Example**
 
@@ -881,17 +903,17 @@ NSString *res = _.unescape(@"lod&ampash");
 
 ```
 
-###  ###
+### sqrt ###
 
-
+Calculates the square root function.
 
 **Arguments***
 
-
+n (number): The number to compute.
 
 **Return**
 
-
+(number): Returns the calculated number.
 
 **Example**
 
@@ -899,76 +921,65 @@ NSString *res = _.unescape(@"lod&ampash");
 
 ```
 
-###  ###
+### sum ###
 
-
-
-**Arguments***
-
-
-
-**Return**
-
-
-
-**Example**
-
-```sh
-
-```
-
-###  ###
-
-
+Gets the sum of the values in collection.
 
 **Arguments***
 
-
+collection (Array|Object|string): The collection to iterate over.
 
 **Return**
 
-
+(number): Returns the sum.
 
 **Example**
 
-```sh
-
+```sh  
+double res = _.sum(@[@1,@2,@3,@4,@"abc"]);
 ```
 
 # Array
 
 ### flatten ###
 
-
+Flattens a nested array.
 
 **Arguments***
 
-
+array (Array): The array to flatten.
 
 **Return**
 
-
+(Array): Returns the new flattened array.
 
 **Example**
 
 ```sh
-
+NSArray *array = @[@1,@[@2,@3,@[@4]]];
+NSArray *flattened = _.flatten(array);
 ```
 
 ### map ###
 
-
+Creates an array of values by running each element in collection through iteratee.
+The iteratee is bound to thisArg and invoked with three arguments: (value,index).
 
 **Arguments***
 
-
+array (Array): The collection to iterate over.
+block (Function): The function invoked per iteration.
 
 **Return**
 
-
+(Array): Returns the new mapped array.
 
 **Example**
 
 ```sh
-
+NSArray *array = @[@1,@2];
+NSArray *mapped = _.map(array,^id(id obj,NSInteger index) {
+  NSInteger value = [obj integerValue] * 3;
+  return [NSNumber numberWithInteger:value];
+});
 ```
