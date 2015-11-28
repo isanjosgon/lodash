@@ -431,26 +431,531 @@ BOOL res = _.lt(4,3);
 BOOL res = _.lte(4,3);
 ```
 
+# String
 
+### capitalize ###
 
+Capitalizes the first character of string.
 
+**Arguments***
 
+[string=''] (string): The string to capitalize.
 
+**Return**
 
+(string): Returns the capitalized string.
 
+**Example**
 
+```sh
+NSString *res = _.capitalize(@"lodash");
+```
 
+### lowercase ###
 
+Converts the string to lowercase.
 
+**Arguments***
 
+[string=''] (string): The string to convert.
 
+**Return**
 
+(string): Returns the uppercase string.
 
+**Example**
 
+```sh
+NSString *res = _.lowercase(@"LoDAsh");
+```
 
+### uppercase ###
 
+Converts the string to uppercase.
+
+**Arguments***
+
+[string=''] (string): The string to convert.
+
+**Return**
+
+(string): Returns the uppercase string.
+
+**Example**
+
+```sh
+NSString *res = _.uppercase(@"lodash");
+```
+
+### padLeft ###
+
+Pads string on the left side if it’s shorter than length.
+Padding characters are truncated if they exceed length.
+
+**Arguments***
+
+[string=''] (string): The string to pad.
+[length=0] (number): The padding length.
+[chars=' '] (string): The string used as padding.
+
+**Return**
+
+(string): Returns the padded string.
+
+**Example**
+
+```sh
+NSString *res = _.padLeft(@"lodash",5,@" ");
+```
+
+### padRight ###
+
+Pads string on the right side if it’s shorter than length.
+Padding characters are truncated if they exceed length.
+
+**Arguments***
+
+[string=''] (string): The string to pad.
+[length=0] (number): The padding length.
+[chars=' '] (string): The string used as padding.
+
+**Return**
+
+(string): Returns the padded string.
+
+**Example**
+
+```sh
+NSString *res = _.padRight(@"lodash",5,@" ");
+```
+
+### contain ###
+
+Searches the string in a specific string.
+
+**Arguments***
+
+[string=''] (string): The string to search.
+
+**Return**
+
+(boolean): Returns true if the target string is contained within the string.
+
+**Example**
+
+```sh
+BOOl res = _.contain(@"lodash",@"da");
+```
+
+### replace ###
+
+Replaces all occurences in the given string.
+
+**Arguments***
+
+string (string): The string to replace.
+of (string): Occurences to replace.
+with (string): The string to replace with.
+
+**Return**
+
+(string): Returns the replaced string.
+
+**Example**
+
+```sh
+NSString *res = _.replace(@"lodash is awesome",@"lodash",@"underscore");
+```
+
+### parseInt ###
+
+Converts string to an integer.
+
+**Arguments***
+
+string (string): The string to convert.
+
+**Return**
+
+(int): Returns the converted integer.
+
+**Example**
+
+```sh
+NSString *res = _.parseInt(123);
+```
+
+### repeat ###
+
+Repeats the given string n times.
+
+**Arguments***
+
+[string=''] (string): The string to repeat.
+(number): The number of times to repeat the string.
+
+**Return**
+
+(string): Returns the repeated string.
+
+**Example**
+
+```sh
+NSString *res = _.repeat(@"123",3);
+```
+
+### trim ###
+
+Removes leading and trailing whitespace from string.
+
+**Arguments***
+
+[string=''] (string): The string to trim.
+
+**Return**
+
+(string): Returns the trimmed string.
+
+**Example**
+
+```sh
+NSString *res = _.trim(@"  123      ");
+```
+
+### strip ###
+
+Removes occurrences of the given string.
+
+**Arguments***
+
+string (string): The string to strip.
+separator (string): Occurrences to remove.
+
+**Return**
+
+(string): Returns the stripped string.
+
+**Example**
+
+```sh
+NSStrin *res = _.strip(@"12345",@"3");
+```
+
+### split ###
+
+Splits the string at the given separator.
+Returns a nil array if the separator is nil.
+
+**Arguments***
+
+string (string): The string to split.
+separator (string): Separator.
+
+**Return**
+
+(array): Returns the splitted array.
+
+**Example**
+
+```sh
+NSArray *array = _.split(@"1,2,3",@",");
+```
+
+### join ###
+
+Joins the strings in the array.
+
+**Arguments***
+
+(array): The array with the strings
+
+**Return**
+
+(string): Returns the joined string.
+
+**Example**
+
+```sh
+NSString *res = _.join(@[@"1",@"2",@"3"],@",");
+```
+
+### startsWith ###
+
+Checks if string starts with the given target string.
+
+**Arguments***
+
+string (string): The string to search.
+target (string): The string to search for.
+
+**Return**
+
+(boolean): Returns true if string ends with target, else false.
+
+**Example**
+
+```sh
+NSString *res = _.startsWith(@"lodash",@"lo");
+```
+
+### endsWith ###
+
+Checks if string ends with the given target string.
+
+**Arguments***
+
+string (string): The string to search.
+target (string): The string to search for.
+
+**Return**
+
+(boolean): Returns true if string ends with target, else false.
+
+**Example**
+
+```sh
+NSString *res = _.endsWith(@"lodash",@"sh");
+```
+
+### escape ###
+
+Escapes a string for insertion into HTML, replacing &, <, >, ", `, and ' characters.
+
+**Arguments***
+
+string (string): String to escape.
+
+**Return**
+
+(string): Returns the escaped string.
+
+**Example**
+
+```sh
+NSString *res = _.escape(@"lod&ash");
+```
+
+### unescape ###
+
+The opposite of escape, replaces &amp;, &lt;, &gt;, &quot;, &#96; and &#x27; with their unescaped counterparts.
+
+**Arguments***
+
+string (string): String to escape.
+
+**Return**
+
+(string): Returns the unescaped string.
+
+**Example**
+
+```sh
+NSString *res = _.unescape(@"lod&ampash");
+```
+
+# Math
 
 ###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+# Array
+
+### flatten ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
+```
+
+### map ###
 
 
 

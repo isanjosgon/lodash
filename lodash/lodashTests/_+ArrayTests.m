@@ -20,7 +20,6 @@
 {
     NSArray *array = @[@1,@[@2,@3,@[@4]]];
     NSArray *flattened = _.flatten(array);
-    NSLog(@"FLATTEN value: %@",flattened);
     for (id obj in flattened) {
         XCTAssertEqual(_.isArray(obj),NO);
     }
@@ -33,7 +32,6 @@
         NSInteger value = [obj integerValue] * 3;
         return [NSNumber numberWithInteger:value];
     });
-    NSLog(@"MAP value: %@",mapped);
     int index = 0;
     for (NSNumber *number in mapped) {
         XCTAssertEqual([number integerValue],[array[index++] integerValue] * 3);
