@@ -10,6 +10,7 @@
 		5B0C7DBA1C038B4400BBFC7A /* lodash+Array.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B0C7DB81C038B4400BBFC7A /* lodash+Array.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B0C7DBB1C038B4400BBFC7A /* lodash+Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C7DB91C038B4400BBFC7A /* lodash+Array.m */; };
 		5B0C7DBD1C0471AB00BBFC7A /* _+ArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C7DBC1C0471AB00BBFC7A /* _+ArrayTests.m */; };
+		5B0C7E3B1C099FAC00BBFC7A /* _+LangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0C7E3A1C099FAC00BBFC7A /* _+LangTests.m */; };
 		812AEB691B775D2D00371B5A /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 812AEB681B775D2D00371B5A /* _.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		812AEB6F1B775D2D00371B5A /* lodash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812AEB631B775D2D00371B5A /* lodash.framework */; };
 		812AEB8E1B775D3F00371B5A /* Blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 812AEB811B775D3F00371B5A /* Blocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,6 +44,7 @@
 		5B0C7DB81C038B4400BBFC7A /* lodash+Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "lodash+Array.h"; sourceTree = "<group>"; };
 		5B0C7DB91C038B4400BBFC7A /* lodash+Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "lodash+Array.m"; sourceTree = "<group>"; };
 		5B0C7DBC1C0471AB00BBFC7A /* _+ArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "_+ArrayTests.m"; sourceTree = "<group>"; };
+		5B0C7E3A1C099FAC00BBFC7A /* _+LangTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "_+LangTests.m"; sourceTree = "<group>"; };
 		812AEB631B775D2D00371B5A /* lodash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = lodash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		812AEB671B775D2D00371B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		812AEB681B775D2D00371B5A /* _.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				81C98E781B7E79D200626F82 /* _+UtilityTests.m */,
 				81C98E7A1B7E851700626F82 /* _+MathTests.m */,
 				5B0C7DBC1C0471AB00BBFC7A /* _+ArrayTests.m */,
+				5B0C7E3A1C099FAC00BBFC7A /* _+LangTests.m */,
 				812AEB731B775D2D00371B5A /* Supporting Files */,
 			);
 			path = lodashTests;
@@ -302,6 +305,7 @@
 				81C98E791B7E79D200626F82 /* _+UtilityTests.m in Sources */,
 				5B0C7DBD1C0471AB00BBFC7A /* _+ArrayTests.m in Sources */,
 				81C98E7B1B7E851700626F82 /* _+MathTests.m in Sources */,
+				5B0C7E3B1C099FAC00BBFC7A /* _+LangTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

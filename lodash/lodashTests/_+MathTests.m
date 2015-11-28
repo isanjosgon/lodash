@@ -30,7 +30,6 @@
     NSArray *numbers = @[@1,@2,@3,@4,@"abc"];
     
     XCTAssertEqual(10,_.sum(numbers));
-    NSLog(@"SUM value: %f",_.sum(numbers));
 }
 
 @end
