@@ -1,0 +1,6 @@
+framework module lodash {
+  umbrella header "lodash.h"
+
+  export *
+  module * { export * }
+}
