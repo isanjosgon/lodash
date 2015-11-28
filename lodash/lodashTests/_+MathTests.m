@@ -25,6 +25,46 @@
     XCTAssertEqual(a + b,_.add(a,b));
 }
 
+- (void)testCeil
+{
+    XCTAssertEqual(_.ceil(4.2),5);
+}
+
+- (void)testFloor
+{
+    XCTAssertEqual(_.floor(4.2),4);
+}
+
+- (void)testMax
+{
+    XCTAssertEqual(_.max(2,3),3);
+}
+
+- (void)testMin
+{
+    XCTAssertEqual(_.min(2,3),2);
+}
+
+- (void)testRound
+{
+    XCTAssertEqual(_.round(4.6),5);
+}
+
+- (void)testAbs
+{
+    XCTAssertEqual(_.abs(-2),2);
+}
+
+- (void)testPower
+{
+    XCTAssertEqual(_.pow(2,2),4);
+}
+
+- (void)testSqrt
+{
+    XCTAssertEqual(_.sqrt(4),2);
+}
+
 - (void)testSum
 {
     NSArray *numbers = @[@1,@2,@3,@4,@"abc"];

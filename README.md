@@ -771,7 +771,7 @@ b (number): The second number to add.
 **Example**
 
 ```sh
-double res = _.add(4,6);
+double res = _.add(4,6); // 10
 ```
 
 ### ceil ###
@@ -789,7 +789,7 @@ n (number): The number to round up.
 **Example**
 
 ```sh
-
+double res = _.ceil(4.2); // 5
 ```
 
 ### floor ###
@@ -807,7 +807,7 @@ n (number): The number to round down.
 **Example**
 
 ```sh
-
+double res = _.floor(4.2); // 4
 ```
 
 ### max ###
@@ -826,7 +826,7 @@ b (number): Second number to compare
 **Example**
 
 ```sh
-
+double res = _.max(2,3); // 3
 ```
 
 ### min ###
@@ -845,7 +845,7 @@ b (number): Second number to compare
 **Example**
 
 ```sh
-
+double res = _.min(2,3); // 2
 ```
 
 ### round ###
@@ -863,7 +863,7 @@ n (number): The number to round.
 **Example**
 
 ```sh
-
+double res = _.round(4.6); // 5
 ```
 
 ### abs ###
@@ -881,7 +881,7 @@ n (number): The number to compute.
 **Example**
 
 ```sh
-
+double res = _.abs(-2); // 2
 ```
 
 ### power ###
@@ -900,7 +900,7 @@ b (number): Precision.
 **Example**
 
 ```sh
-
+double res = _.pow(2,2); // 4
 ```
 
 ### sqrt ###
@@ -918,7 +918,7 @@ n (number): The number to compute.
 **Example**
 
 ```sh
-
+double res = _.sqrt(4); // 2
 ```
 
 ### sum ###
