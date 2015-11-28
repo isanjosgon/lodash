@@ -1,27 +1,18 @@
 # lodash
 
-Async is a utility framework which provides asynchronous working to help processing background tasks without blocking the UI.
+Lodash is a utility framework which provides productivity to the developer without losing performance.
 
-It is inspired by Javascript module https://github.com/caolan/async.
+It is inspired by Javascript module https://github.com/lodash/lodash.
 
 ### Quick Example ###
 
 ```sh
-async.parallel(@[^(callbackBlock next) {
-  NSLog(@"block1");
-  sleep(2);
-  next(nil,@"block1");
-},^(callbackBlock next) {
-  NSLog(@"block2");
-  sleep(7);
-  next(nil,@"block2");
-},^(callbackBlock next) {
-  NSLog(@"block3");
-  sleep(4);
-  next(nil,@"block3");
-}],^(NSError *err,id res) {
-  NSLog(@"err : %@ , res : %@",err,res);
+NSArray *array = @[@1,@2];
+NSArray *mapped = _.map(array,^id(id obj,NSInteger index) {
+  NSInteger value = [obj integerValue] * 3;
+  return [NSNumber numberWithInteger:value];
 });
+NSLog(@"mapped array: %@",mapped);
 ```
 
 ### How to use ###
@@ -34,83 +25,113 @@ Ready in 1 minute. Just following the next steps:
 
 Final Xcode configuration
 
-![image](http://i67.tinypic.com/yeb04.png)
+![image](http://i64.tinypic.com/2u59jkj.png)
 
-### Control Flow ###
+### Utility ###
 
 Available methods on the framework:
-* parallel
-* series
-* waterfall
+* times
+* random
+* range
+* uniqueId
 
-# Control Flow
+# Utility
 
-### parallel ###
+### times ###
 
-Run the tasks array of functions in parallel and asynchronously, without waiting until the previous function has completed. If any of the functions pass an error to its callback, the main callback is immediately called with the value of the error. Once the tasks have completed, the results are passed to the final callback as an array.
+Iteratee n times, returning an array of the results of each invocation.
+'Times' is invoked with one argument: n(number).
 
 **Arguments**
 
-tasks - An array or object containing functions to run.
-callback(err,res) - A callback to run once all the functions have completed successfully.
+n (integer): The number of times to invoke iteratee.
+block (Function): The function invoked per iteration.
+
+**Return**
+
+(void):
 
 **Example**
 
 ```sh
-async.parallel(@[^(callbackBlock next) {
-  // do some stuff ... it will run asynchronously
-  next(nil,@"one");
-},^(callbackBlock next) {
-  // do some stuff ... it will run asynchronously
-  next(nil,@"two");
-}],^(NSError *err,id res) {
-  NSLog(@"err : %@ , res : %@",err,res);
+NSInteger __block count = 0;
+NSInteger times = 10;
+_.times(times,^(NSInteger n) {
+  count++;
 });
 ```
 
-### series ###
+### random ###
 
-Run the functions in the tasks array in series and asynchronously, each one running once the previous function has completed. If any functions in the series pass an error to its callback, no more functions are run, and callback is immediately called with the value of the error. Otherwise, callback receives an array of results when tasks have completed.
+Returns a random integer between 0 and max, inclusive.
 
 **Arguments**
 
-tasks - An array or object containing functions to run.
-callback(err,res) - A callback to run once all the functions have completed successfully.
+ max (integer): The max random number possible.
+
+**Return**
+
+(integer): Returns the random integer.
 
 **Example**
 
 ```sh
-async.series(@[^(callbackBlock next) {
-  // do some stuff ... it will run asynchronously
-  next(nil,@"one");
-},^(callbackBlock next) {
-  // do some stuff ... it will run asynchronously
-  next(nil,@"two");
-}],^(NSError *err,id res) {
-  NSLog(@"err : %@ , res : %@",err,res);
-});
+NSInteger res = _.random(100);
 ```
 
-### waterfall ###
+### range ###
 
-Runs the tasks array of functions in series and asynchronously, each passing their results to the next in the array. However, if any of the tasks pass an error to their own callback, the next function is not executed,
-and the main callback is immediately called with the error.
+Returns a random integer between min and max, inclusive.
+If you only pass one argument, it will return a number between 0 and that number.
 
 **Arguments**
 
-tasks - An array or object containing functions to run.
-callback(err,res) - A callback to run once all the functions have completed successfully.
+min (integer): The min random number possible.
+max (integer): The max random number possible.
+
+**Return**
+
+(integer): Returns the random integer.
 
 **Example**
 
 ```sh
-async.waterfall(@[^(id data,waterfallBlock next) {
-  // do some stuff ... it will run asynchronously
-  next(@"one",nil,@"one");
-},^(id data,waterfallBlock next) {
-  // do some stuff ... it will run asynchronously
-  next(nil,nil,@"two");
-}],^(NSError *err,id res) {
-  NSLog(@"err : %@ , res : %@",err,res);
-});
+NSInteger res = _.range(90,100);
+```
+### uniqueId ###
+
+Generate a unique integer id (unique within the entire client session).
+Useful for temporary ids.
+If prefix is passed, the id will be appended to it.
+
+**Arguments***
+
+prefix (string): A prefix if we want to apply one.
+
+**Return**
+
+(string): Returns the random unique id.
+
+**Example**
+
+```sh
+NSString *id = _.uniqueId(@"lodash");
+```
+
+###  ###
+
+
+
+**Arguments***
+
+
+
+**Return**
+
+
+
+**Example**
+
+```sh
+
 ```

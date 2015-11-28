@@ -38,7 +38,7 @@ static NSInteger idCounter = 0;
         if (prefix) {
             NSParameterAssert(NSObject.isString(prefix));
         }
-        return [NSString stringWithFormat:@"%@%ld", prefix ? prefix : @"", (long)idCounter++];
+        return [NSString stringWithFormat:@"%@%ld", prefix ? prefix : @"",(long)idCounter++];
     };
 }
 

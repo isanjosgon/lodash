@@ -48,4 +48,12 @@
     XCTAssert(min <= res <= max);
 }
 
+- (void)testUniqueId
+{
+    NSString *id1 = _.uniqueId(@"lodash");
+    NSString *id2 = _.uniqueId(@"lodash");
+    
+    XCTAssertNotEqual(id1,id2);
+}
+
 @end
