@@ -161,7 +161,7 @@ Generate a unique integer id (unique within the entire client session).
 Useful for temporary ids.
 If prefix is passed, the id will be appended to it.
 
-**Arguments***
+**Arguments**
 
 prefix (string): A prefix if we want to apply one.
 
@@ -180,7 +180,7 @@ NSString *id = _.uniqueId(@"lodash");
 
 Checks if value is classified as an Array object.
 
-**Arguments***
+**Arguments**
 
 value (id): The value to check.
 
@@ -198,7 +198,7 @@ BOOL res = _.isArray(@[@1,@2]);
 
 Checks if value is classified as a Number primitive or object.
 
-**Arguments***
+**Arguments**
 
 value (id): The value to check.
 
@@ -216,7 +216,7 @@ BOOL res = _.isNumber(@1);
 
 Checks if value is classified as a String primitive or object.
 
-**Arguments***
+**Arguments**
 
 value (id): The value to check.
 
@@ -234,7 +234,7 @@ BOOL res = _.isString(@"lodash");
 
 Checks if value is null.
 
-**Arguments***
+**Arguments**
 
 value (id): The value to check.
 
@@ -253,7 +253,7 @@ BOOL res = _.isNull(@"lodash");
 
 Checks if value is classified as a Dictionary primitive or object.
 
-**Arguments***
+**Arguments**
 
 value (id): The value to check.
 
@@ -271,7 +271,7 @@ BOOL res = _.isDictionary(@{@"key":@1});
 
 Checks if value is classified as a Date primitive or object.
 
-**Arguments***
+**Arguments**
 
 value (id): The value to check.
 
@@ -289,7 +289,7 @@ BOOL res = _.isDate([NSDate date]);
 
 Checks if value is classified as a Data primitive or object.
 
-**Arguments***
+**Arguments**
 
 value (id): The value to check.
 
@@ -309,7 +309,7 @@ BOOL res = _.isData(data);
 
 Checks if value is classified as a Set primitive or object.
 
-**Arguments***
+**Arguments**
 
 value (id): The value to check.
 
@@ -328,7 +328,7 @@ BOOL res = _.isSet(set);
 
 Checks if value is null.
 
-**Arguments***
+**Arguments**
 
 value (id): The value to check.
 
@@ -353,7 +353,7 @@ The customizer is bound to thisArg and invoked with three arguments: (value, oth
 Note: This method supports comparing arrays, booleans, Date objects, numbers, Object objects, regexes, and strings.
 Objects are compared by their own, not inherited, enumerable properties.
 
-**Arguments***
+**Arguments**
 
 a (id): The value to compare.
 b (id): The other value to compare.
@@ -374,7 +374,7 @@ BOOL res = _.isEqual(@{@"key":@1},@{@"key":@2});
 
 Converts value to an array.
 
-**Arguments***
+**Arguments**
 
 value (id): The NSSet to convert.
 
@@ -394,7 +394,7 @@ NSArray *array = _.toArray(set);
 gt : Checks if value is greater than other.
 gte : Checks if value is greater than or equal other.
 
-**Arguments***
+**Arguments**
 
 a (NSInteger): The value to compare.
 b (NSInteger): The other value to compare.
@@ -415,7 +415,7 @@ BOOL res = _.gte(4,3);
 lt : Checks if value is less than other.
 lte : Checks if value is less than or equal other.
 
-**Arguments***
+**Arguments**
 
 a (NSInteger): The value to compare.
 b (NSInteger): The other value to compare.
@@ -437,7 +437,7 @@ BOOL res = _.lte(4,3);
 
 Capitalizes the first character of string.
 
-**Arguments***
+**Arguments**
 
 [string=''] (string): The string to capitalize.
 
@@ -455,7 +455,7 @@ NSString *res = _.capitalize(@"lodash");
 
 Converts the string to lowercase.
 
-**Arguments***
+**Arguments**
 
 [string=''] (string): The string to convert.
 
@@ -473,7 +473,7 @@ NSString *res = _.lowercase(@"LoDAsh");
 
 Converts the string to uppercase.
 
-**Arguments***
+**Arguments**
 
 [string=''] (string): The string to convert.
 
@@ -492,7 +492,7 @@ NSString *res = _.uppercase(@"lodash");
 Pads string on the left side if it’s shorter than length.
 Padding characters are truncated if they exceed length.
 
-**Arguments***
+**Arguments**
 
 [string=''] (string): The string to pad.
 [length=0] (number): The padding length.
@@ -513,7 +513,7 @@ NSString *res = _.padLeft(@"lodash",5,@" ");
 Pads string on the right side if it’s shorter than length.
 Padding characters are truncated if they exceed length.
 
-**Arguments***
+**Arguments**
 
 [string=''] (string): The string to pad.
 [length=0] (number): The padding length.
@@ -533,7 +533,7 @@ NSString *res = _.padRight(@"lodash",5,@" ");
 
 Searches the string in a specific string.
 
-**Arguments***
+**Arguments**
 
 [string=''] (string): The string to search.
 
@@ -551,7 +551,7 @@ BOOl res = _.contain(@"lodash",@"da");
 
 Replaces all occurences in the given string.
 
-**Arguments***
+**Arguments**
 
 string (string): The string to replace.
 of (string): Occurences to replace.
@@ -571,7 +571,7 @@ NSString *res = _.replace(@"lodash is awesome",@"lodash",@"underscore");
 
 Converts string to an integer.
 
-**Arguments***
+**Arguments**
 
 string (string): The string to convert.
 
@@ -589,7 +589,7 @@ NSString *res = _.parseInt(123);
 
 Repeats the given string n times.
 
-**Arguments***
+**Arguments**
 
 [string=''] (string): The string to repeat.
 (number): The number of times to repeat the string.
@@ -608,7 +608,7 @@ NSString *res = _.repeat(@"123",3);
 
 Removes leading and trailing whitespace from string.
 
-**Arguments***
+**Arguments**
 
 [string=''] (string): The string to trim.
 
@@ -626,7 +626,7 @@ NSString *res = _.trim(@"  123      ");
 
 Removes occurrences of the given string.
 
-**Arguments***
+**Arguments**
 
 string (string): The string to strip.
 separator (string): Occurrences to remove.
@@ -646,7 +646,7 @@ NSStrin *res = _.strip(@"12345",@"3");
 Splits the string at the given separator.
 Returns a nil array if the separator is nil.
 
-**Arguments***
+**Arguments**
 
 string (string): The string to split.
 separator (string): Separator.
@@ -665,7 +665,7 @@ NSArray *array = _.split(@"1,2,3",@",");
 
 Joins the strings in the array.
 
-**Arguments***
+**Arguments**
 
 (array): The array with the strings
 
@@ -683,7 +683,7 @@ NSString *res = _.join(@[@"1",@"2",@"3"],@",");
 
 Checks if string starts with the given target string.
 
-**Arguments***
+**Arguments**
 
 string (string): The string to search.
 target (string): The string to search for.
@@ -702,7 +702,7 @@ NSString *res = _.startsWith(@"lodash",@"lo");
 
 Checks if string ends with the given target string.
 
-**Arguments***
+**Arguments**
 
 string (string): The string to search.
 target (string): The string to search for.
@@ -721,7 +721,7 @@ NSString *res = _.endsWith(@"lodash",@"sh");
 
 Escapes a string for insertion into HTML, replacing &, <, >, ", `, and ' characters.
 
-**Arguments***
+**Arguments**
 
 string (string): String to escape.
 
@@ -739,7 +739,7 @@ NSString *res = _.escape(@"lod&ash");
 
 The opposite of escape, replaces &amp;, &lt;, &gt;, &quot;, &#96; and &#x27; with their unescaped counterparts.
 
-**Arguments***
+**Arguments**
 
 string (string): String to escape.
 
@@ -759,7 +759,7 @@ NSString *res = _.unescape(@"lod&ampash");
 
 Adds two numbers.
 
-**Arguments***
+**Arguments**
 
 a (number): The first number to add.
 b (number): The second number to add.
@@ -778,7 +778,7 @@ double res = _.add(4,6); // 10
 
 Calculates n rounded up to precision.
 
-**Arguments***
+**Arguments**
 
 n (number): The number to round up.
 
@@ -796,7 +796,7 @@ double res = _.ceil(4.2); // 5
 
 Calculates n rounded down to precision.
 
-**Arguments***
+**Arguments**
 
 n (number): The number to round down.
 
@@ -814,7 +814,7 @@ double res = _.floor(4.2); // 4
 
 Gets the maximum value of the values given.
 
-**Arguments***
+**Arguments**
 
 a (number): First number to compare.
 b (number): Second number to compare
@@ -833,7 +833,7 @@ double res = _.max(2,3); // 3
 
 Gets the minimum value of the values given.
 
-**Arguments***
+**Arguments**
 
 a (number): First number to compare.
 b (number): Second number to compare
@@ -852,7 +852,7 @@ double res = _.min(2,3); // 2
 
 Calculates n rounded to precision.
 
-**Arguments***
+**Arguments**
 
 n (number): The number to round.
 
@@ -870,7 +870,7 @@ double res = _.round(4.6); // 5
 
 Computes the absolute value of the given number.
 
-**Arguments***
+**Arguments**
 
 n (number): The number to compute.
 
@@ -888,7 +888,7 @@ double res = _.abs(-2); // 2
 
 Computes a raised to the power b.
 
-**Arguments***
+**Arguments**
 
 a (number): The number to compute.
 b (number): Precision.
@@ -907,7 +907,7 @@ double res = _.pow(2,2); // 4
 
 Calculates the square root function.
 
-**Arguments***
+**Arguments**
 
 n (number): The number to compute.
 
@@ -925,7 +925,7 @@ double res = _.sqrt(4); // 2
 
 Gets the sum of the values in collection.
 
-**Arguments***
+**Arguments**
 
 collection (Array|Object|string): The collection to iterate over.
 
@@ -945,7 +945,7 @@ double res = _.sum(@[@1,@2,@3,@4,@"abc"]);
 
 Flattens a nested array.
 
-**Arguments***
+**Arguments**
 
 array (Array): The array to flatten.
 
@@ -965,7 +965,7 @@ NSArray *flattened = _.flatten(array);
 Creates an array of values by running each element in collection through iteratee.
 The iteratee is bound to thisArg and invoked with three arguments: (value,index).
 
-**Arguments***
+**Arguments**
 
 array (Array): The collection to iterate over.
 block (Function): The function invoked per iteration.
