@@ -38,4 +38,24 @@
     }
 }
 
+- (void)testIndexOf
+{
+    NSArray *array = @[@1,@2,@3,@4,@5];
+    NSInteger index = _.indexOf(array,@3,0);
+    XCTAssertEqual(2,index);
+    index = _.indexOf(array,@7,0);
+    XCTAssertEqual(NSNotFound,index);
+}
+
+- (void)testSlice
+{
+    NSArray *array = @[@1,@2,@3,@4,@5];
+    NSArray *sliced = _.slice(array,1,3);
+    XCTAssertEqual(3,sliced.count);
+    NSInteger i = [sliced[0] integerValue];
+    for (NSNumber *number in sliced) {
+        XCTAssertEqual(i++,[number integerValue]);
+    }
+}
+
 @end

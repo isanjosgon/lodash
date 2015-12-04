@@ -42,11 +42,11 @@
  ---
  array (Array): The array to search.
  value (*): The value to search for.
- [fromIndex=0] (number): The index to search from.
+ fromIndex (number): The index to search from.
  
  Returns
  ---
- (number): Returns the index of the matched value, else -1.
+ (number): Returns the index of the matched value, else NSNotFound.
  */
 + (NSUInteger(^)(NSArray *,id,NSInteger))_indexOf;
 

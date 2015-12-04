@@ -91,6 +91,8 @@ Available methods on the framework:
 Available methods on the framework:
 * flatten
 * map
+* indexOf
+* slice
 
 # Utility
 
@@ -982,4 +984,51 @@ NSArray *mapped = _.map(array,^id(id obj,NSInteger index) {
   NSInteger value = [obj integerValue] * 3;
   return [NSNumber numberWithInteger:value];
 });
+```
+
+### indexOf ###
+
+Gets the index at which the first occurrence of value is found in array.
+If fromIndex is negative, it’s used as the offset from the end of array.
+
+**Arguments**
+
+array (Array): The array to search.
+value (*): The value to search for.
+fromIndex (number): The index to search from.
+
+**Return**
+
+(number): Returns the index of the matched value, else NSNotFound.
+
+**Example**
+
+```sh
+NSArray *array = @[@1,@2,@3,@4,@5];
+NSInteger index1 = _.indexOf(array,@3,0); // 2
+NSInteger index2 = _.indexOf(array,@7,0); // NotFound
+if (NSNotFound == index) {
+    NSLog(@"not found");
+}
+```
+
+### slice ###
+
+Creates a slice of array from start up to end.
+
+**Arguments**
+
+array (Array): The array to slice.
+[start=0] (number): The start position.
+[end=array.length] (number): The end position.
+
+**Return**
+
+(Array): Returns the slice of array.
+
+**Example**
+
+```sh
+NSArray *array = @[@1,@2,@3,@4,@5];
+NSArray *sliced = _.slice(array,1,3); // [2,3,4]
 ```
