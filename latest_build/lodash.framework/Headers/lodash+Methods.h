@@ -29,6 +29,11 @@
 #pragma mark - Arrays
 + (NSArray *(^)(NSArray *array))flatten;
 + (NSArray *(^)(NSArray *array,lodashIteratorArrayBlock block))map;
++ (NSUInteger(^)(NSArray *,id,NSInteger))indexOf;
++ (NSArray *(^)(NSArray *,NSInteger,NSInteger))slice;
++ (void(^)(NSArray *,lodashIteratorBlock))each;
++ (NSArray *(^)(NSArray *,id,NSInteger))replaceInArray;
++ (NSArray *(^)(NSArray *,NSArray *))difference;
 
 #pragma mark - Set
 

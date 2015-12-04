@@ -30,6 +30,7 @@ typedef NSString *(^lodashReturnRepeatStringBlock)(NSString *string, NSInteger n
 #pragma mark - Array Blocks
 typedef NSArray *(^lodashReturnArrayBlock)(id obj);
 typedef id(^lodashIteratorArrayBlock)(id obj,NSInteger index);
+typedef void(^lodashIteratorBlock)(id obj,NSInteger index);
 
 #pragma mark - Double Blocks
 typedef double(^lodashReturnDoubleBlock)();

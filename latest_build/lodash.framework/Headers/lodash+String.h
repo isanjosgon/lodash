@@ -133,12 +133,11 @@
 + (lodashReturnRepeatStringBlock)_repeat;
 
 /**
- Removes leading and trailing whitespace or specified characters from string.
+ Removes leading and trailing whitespace from string.
  
  Arguments
  ---
  [string=''] (string): The string to trim.
- [chars=whitespace] (string): The characters to trim.
  
  Returns
  ---
@@ -147,12 +146,12 @@
 + (lodashReturnStringBlock)_trim;
 
 /**
- Removes occurences of the given string.
+ Removes occurrences of the given string.
  
  Arguments
  ---
  string (string): The string to strip.
- separtor (string): Occurences to remove.
+ separator (string): Occurrences to remove.
  
  Returns
  ---
