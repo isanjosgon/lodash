@@ -94,6 +94,8 @@ Available methods on the framework:
 * indexOf
 * slice
 * each
+* replaceInArray
+* difference
 
 # Utility
 
@@ -1078,4 +1080,25 @@ atIndex (number): index to replace the value;
 NSArray *array = @[@1,@2,@3,@4];
 NSArray *replaced = _.replaceInArray(array,@0,1);
 }); // [@1,@0,@3,@4]
+```
+
+### difference ###
+
+Creates an array excluding all provided values.
+
+**Arguments**
+
+array (Array): The array to filter.
+values (Array): The values to exclude.
+
+**Return**
+
+(Array): Returns the new array of filtered values.
+
+**Example**
+
+```sh
+NSArray *array = @[@1,@2,@3,@4];
+NSArray *replaced = _.difference(array,@[@1]);
+}); // [@2,@3,@4]
 ```

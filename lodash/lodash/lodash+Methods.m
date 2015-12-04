@@ -53,6 +53,13 @@
     };
 }
 
++ (NSArray *(^)(NSArray *,NSArray *))difference
+{
+    return ^NSArray *(NSArray *array,NSArray *values) {
+        return NSArray._difference(array,values);
+    };
+}
+
 #pragma mark - String shortcuts
 + (lodashReturnStringBlock)capitalize
 {

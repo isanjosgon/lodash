@@ -75,4 +75,14 @@
     XCTAssertEqual(@0,replaced[1]);
 }
 
+- (void)testDifference
+{
+    NSArray *array = @[@1,@2,@3,@4];
+    NSArray *values = @[@2,@4];
+    NSArray *difference = _.difference(array,values);
+    XCTAssertEqual(difference.count,array.count - values.count);
+    NSArray *res = @[@1,@3];
+    XCTAssertEqualObjects(res,difference);
+}
+
 @end

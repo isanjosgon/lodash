@@ -95,4 +95,18 @@
  */
 + (NSArray *(^)(NSArray *,id,NSInteger))_replace;
 
+/**
+ Creates an array of unique array values not included in the other provided array.
+ 
+ Arguments
+ ---
+ array (Array): The array to inspect.
+ values (Array): The values to exclude.
+ 
+ Returns
+ ---
+ (Array): Returns the new array of filtered values.
+ */
++ (NSArray *(^)(NSArray *,NSArray *))_difference;
+
 @end

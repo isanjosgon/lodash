@@ -95,6 +95,17 @@
     };
 }
 
++ (NSArray *(^)(NSArray *,NSArray *))_difference
+{
+    return ^NSArray * (NSArray *array,NSArray *values) {
+        NSParameterAssert(values);
+        NSParameterAssert(NSObject.isArray(values));
+        NSMutableArray *final = [self baseToArray:array];
+        [final removeObjectsInArray:values];
+        return final;
+    };
+}
+
 #pragma mark - Helpers
 /**
  Converts 'array' to a array if it's not one.

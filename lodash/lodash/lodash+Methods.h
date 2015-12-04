@@ -33,6 +33,7 @@
 + (NSArray *(^)(NSArray *,NSInteger,NSInteger))slice;
 + (void(^)(NSArray *,lodashIteratorBlock))each;
 + (NSArray *(^)(NSArray *,id,NSInteger))replaceInArray;
++ (NSArray *(^)(NSArray *,NSArray *))difference;
 
 #pragma mark - Set
 
