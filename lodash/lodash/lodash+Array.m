@@ -51,6 +51,30 @@
     };
 }
 
++ (NSUInteger(^)(NSArray *,id,NSInteger))_indexOf
+{
+    return ^NSUInteger(NSArray *array,id value,NSInteger fromIndex) {
+        NSParameterAssert(array.count > 0);
+        NSParameterAssert(value);
+        NSArray *final = [self baseToArray:array];
+        if (fromIndex > 0) {
+            final = NSArray.slice(final,fromIndex,final.count);
+        } else if (fromIndex < 0) {
+            final = NSArray.slice(final,final.count - fromIndex,final.count);
+        }
+        return [final indexOfObject:value];
+    };
+}
+
++ (NSArray *(^)(NSArray *,NSInteger,NSInteger))_slice
+{
+    return ^NSArray *(NSArray *array,NSInteger start,NSInteger end) {
+        NSParameterAssert(end > start);
+        NSArray *final = [self baseToArray:array];
+        return [final subarrayWithRange: NSMakeRange(start,end)];
+    };
+}
+
 #pragma mark - Helpers
 /**
  Converts 'array' to a array if it's not one.

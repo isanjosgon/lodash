@@ -34,4 +34,35 @@
  */
 + (NSArray *(^)(NSArray *,lodashIteratorArrayBlock))_map;
 
+/**
+ Gets the index at which the first occurrence of value is found in array. 
+ If fromIndex is negative, it’s used as the offset from the end of array.
+ 
+ Arguments
+ ---
+ array (Array): The array to search.
+ value (*): The value to search for.
+ [fromIndex=0] (number): The index to search from.
+ 
+ Returns
+ ---
+ (number): Returns the index of the matched value, else -1.
+ */
++ (NSUInteger(^)(NSArray *,id,NSInteger))_indexOf;
+
+/**
+ Creates a slice of array from start up to end.
+ 
+ Arguments
+ ---
+ array (Array): The array to slice.
+ [start=0] (number): The start position.
+ [end=array.length] (number): The end position.
+ 
+ Returns
+ ---
+ (Array): Returns the slice of array.
+ */
++ (NSArray *(^)(NSArray *,NSInteger,NSInteger))_slice;
+
 @end

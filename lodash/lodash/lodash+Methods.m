@@ -25,6 +25,20 @@
     };
 }
 
++ (NSUInteger(^)(NSArray *,id,NSInteger))indexOf
+{
+    return ^NSUInteger(NSArray *array,id value,NSInteger fromIndex) {
+        return NSArray._indexOf(array,value,fromIndex);
+    };
+}
+
++ (NSArray *(^)(NSArray *,NSInteger,NSInteger))slice
+{
+    return ^NSArray *(NSArray *array,NSInteger start,NSInteger end) {
+        return NSArray._slice(array,start,end);
+    };
+}
+
 #pragma mark - String shortcuts
 + (lodashReturnStringBlock)capitalize
 {
