@@ -75,6 +75,16 @@
     };
 }
 
++ (void(^)(NSArray *,lodashIteratorBlock))_each
+{
+    return ^(NSArray *array,lodashIteratorBlock block) {
+        NSArray *final = [self baseToArray:array];
+        for (NSInteger iterator = 0; iterator < final.count; iterator++) {
+            block(final[iterator],iterator);
+        }
+    };
+}
+
 #pragma mark - Helpers
 /**
  Converts 'array' to a array if it's not one.

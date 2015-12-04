@@ -65,4 +65,19 @@
  */
 + (NSArray *(^)(NSArray *,NSInteger,NSInteger))_slice;
 
+/**
+ Iterates over elements of array invoking iteratee for each element.
+ The iteratee is invoked with two arguments: (value, index).
+ Iteratee functions may exit iteration early by explicitly returning false.
+ 
+ Arguments
+ ---
+ array (Array): The array to iterate over.
+ 
+ Returns
+ ---
+ (*): 
+ */
++ (void(^)(NSArray *,lodashIteratorBlock))_each;
+
 @end

@@ -31,6 +31,7 @@
 + (NSArray *(^)(NSArray *array,lodashIteratorArrayBlock block))map;
 + (NSUInteger(^)(NSArray *,id,NSInteger))indexOf;
 + (NSArray *(^)(NSArray *,NSInteger,NSInteger))slice;
++ (void(^)(NSArray *,lodashIteratorBlock))each;
 
 #pragma mark - Set
 

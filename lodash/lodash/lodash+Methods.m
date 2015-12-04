@@ -39,6 +39,13 @@
     };
 }
 
++ (void(^)(NSArray *,lodashIteratorBlock))each
+{
+    return ^(NSArray *array,lodashIteratorBlock block) {
+        NSArray._each(array,block);
+    };
+}
+
 #pragma mark - String shortcuts
 + (lodashReturnStringBlock)capitalize
 {
@@ -234,7 +241,7 @@
 + (void (^)(NSInteger, lodashIteratorIntegerBlock))times
 {
     return ^(NSInteger n, lodashIteratorIntegerBlock block) {
-        return NSObject._times(n,block);
+        NSObject._times(n,block);
     };
 }
 

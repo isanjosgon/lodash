@@ -93,6 +93,7 @@ Available methods on the framework:
 * map
 * indexOf
 * slice
+* each
 
 # Utility
 
@@ -1031,4 +1032,28 @@ array (Array): The array to slice.
 ```sh
 NSArray *array = @[@1,@2,@3,@4,@5];
 NSArray *sliced = _.slice(array,1,3); // [2,3,4]
+```
+
+### each ###
+
+Iterates over elements of array invoking iteratee for each element.
+The iteratee is invoked with two arguments: (value, index).
+Iteratee functions may exit iteration early by explicitly 'return;'.
+
+**Arguments**
+
+array (Array): The array to iterate over.
+
+**Return**
+
+(*):
+
+**Example**
+
+```sh
+NSArray *array = @[@1,@2];
+__block NSInteger num = 0;
+_.each(array,^(id obj,NSInteger index) {
+  num += [obj integerValue];
+}); // num = 3
 ```

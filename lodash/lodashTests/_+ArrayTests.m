@@ -58,4 +58,14 @@
     }
 }
 
+- (void)testEach
+{
+    NSArray *array = @[@1,@2];
+    __block NSInteger num = 0;
+    _.each(array,^(id obj,NSInteger index) {
+        num += [obj integerValue];
+    });
+    XCTAssertEqual(num,_.sum(array));
+}
+
 @end
