@@ -80,4 +80,19 @@
  */
 + (void(^)(NSArray *,lodashIteratorBlock))_each;
 
+/**
+ Replace the value at a specific index.
+ 
+ Arguments
+ ---
+ array (Array): The array to work with.
+ value (id): value to insert.
+ atIndex (number): index to replace the value;
+ 
+ Returns
+ ---
+ (Array): replaced array.
+ */
++ (NSArray *(^)(NSArray *,id,NSInteger))_replace;
+
 @end

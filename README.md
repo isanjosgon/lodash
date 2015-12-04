@@ -1057,3 +1057,25 @@ _.each(array,^(id obj,NSInteger index) {
   num += [obj integerValue];
 }); // num = 3
 ```
+
+### replaceInArray ###
+
+Replace the value at a specific index.
+
+**Arguments**
+
+array (Array): The array to work with.
+value (id): value to insert.
+atIndex (number): index to replace the value;
+
+**Return**
+
+(Array): replaced array.
+
+**Example**
+
+```sh
+NSArray *array = @[@1,@2,@3,@4];
+NSArray *replaced = _.replaceInArray(array,@0,1);
+}); // [@1,@0,@3,@4]
+```

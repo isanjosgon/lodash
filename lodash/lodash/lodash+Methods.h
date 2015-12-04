@@ -32,6 +32,7 @@
 + (NSUInteger(^)(NSArray *,id,NSInteger))indexOf;
 + (NSArray *(^)(NSArray *,NSInteger,NSInteger))slice;
 + (void(^)(NSArray *,lodashIteratorBlock))each;
++ (NSArray *(^)(NSArray *,id,NSInteger))replaceInArray;
 
 #pragma mark - Set
 

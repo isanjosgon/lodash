@@ -85,6 +85,16 @@
     };
 }
 
++ (NSArray *(^)(NSArray *,id,NSInteger))_replace
+{
+    return ^NSArray *(NSArray *array,id value,NSInteger atIndex) {
+        NSParameterAssert(atIndex < array.count);
+        NSMutableArray *final = [self baseToArray:array];
+        [final replaceObjectAtIndex:atIndex withObject:value];
+        return final;
+    };
+}
+
 #pragma mark - Helpers
 /**
  Converts 'array' to a array if it's not one.

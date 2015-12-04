@@ -68,4 +68,11 @@
     XCTAssertEqual(num,_.sum(array));
 }
 
+- (void)testReplace
+{
+    NSArray *array = @[@1,@2,@3,@4];
+    NSArray *replaced = _.replaceInArray(array,@0,1);
+    XCTAssertEqual(@0,replaced[1]);
+}
+
 @end

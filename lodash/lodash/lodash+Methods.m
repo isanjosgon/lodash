@@ -46,6 +46,13 @@
     };
 }
 
++ (NSArray *(^)(NSArray *,id,NSInteger))replaceInArray
+{
+    return ^NSArray *(NSArray *array,id value,NSInteger atIndex) {
+        return NSArray._replace(array,value,atIndex);
+    };
+}
+
 #pragma mark - String shortcuts
 + (lodashReturnStringBlock)capitalize
 {
